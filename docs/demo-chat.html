@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body{margin:0;background:#0d1117;font-family:'Cascadia Mono','Consolas','Courier New',monospace;font-size:13.5px;color:#c9d1d9;line-height:1.55;padding:18px 20px}
+  .title{color:#58a6ff;font-weight:bold;margin-bottom:10px;font-size:14px}
+  .prompt{color:#3fb950;font-weight:bold}
+  .dim{color:#8b949e}
+  .user{color:#e6edf3;font-weight:bold}
+  .kw{color:#ff7b72}.st{color:#a5d6ff}.cm{color:#8b949e;font-style:italic}.fn{color:#d2a8ff}
+  .box{border:1px solid #30363d;border-radius:8px;padding:14px 16px;margin:10px 0;background:#161b22}
+  .box-h{color:#58a6ff;font-weight:bold;margin-bottom:6px}
+  pre{margin:0;font-family:inherit}
+  .cursor{display:inline-block;width:8px;height:15px;background:#3fb950;vertical-align:middle;animation:blink 1s infinite}
+  @keyframes blink{50%{opacity:0}}
+  .line{white-space:pre-wrap;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="title">█ ai-cli — 终端里的 AI 助手 · 流式输出 + Markdown 高亮</div>
+<div class="line"><span class="prompt">$</span> <span class="user">python -m aicli ask "用 Python 写一个快速排序，并解释时间复杂度"</span></div>
+<div class="line"><span class="dim">┌─</span> 正在调用 <span class="kw">gpt-4o-mini</span> <span class="dim">· 流式输出中 ▍</span></div>
+<div class="box">
+<div class="line">好的！这是快速排序的实现：</div>
+<pre>
+<span class="kw">def</span> <span class="fn">quicksort</span>(arr):
+    <span class="kw">if</span> len(arr) &lt;= <span class="st">1</span>:
+        <span class="kw">return</span> arr
+    pivot = arr[len(arr) // <span class="st">2</span>]
+    left  = [x <span class="kw">for</span> x <span class="kw">in</span> arr <span class="kw">if</span> x &lt; pivot]
+    mid   = [x <span class="kw">for</span> x <span class="kw">in</span> arr <span class="kw">if</span> x == pivot]
+    right = [x <span class="kw">for</span> x <span class="kw">in</span> arr <span class="kw">if</span> x &gt; pivot]
+    <span class="kw">return</span> quicksort(left) + mid + quicksort(right)
+</pre>
+<div class="line"><span class="kw">时间复杂度</span>：平均 <span class="st">O(n log n)</span>，最坏 <span class="st">O(n²)</span></div>
+<div class="line">　· 每次分区 O(n)，递归深度平均 log n 层</div>
+<div class="line">　· 最坏情况（已排序数组 + 固定 pivot）退化为 O(n²)</div>
+</div>
+<div class="line"><span class="dim">└─</span> 💾 已保存到对话历史 #12 <span class="dim">（输入 history 可恢复）</span></div>
+<div class="line" style="margin-top:6px"><span class="prompt">$</span> <span class="cursor"></span></div>
+</body>
+</html>

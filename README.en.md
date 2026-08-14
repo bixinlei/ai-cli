@@ -15,6 +15,10 @@
 
 **ChatGPT, right inside your terminal.** Zero third-party dependencies, works with any OpenAI-compatible API, streaming output, multi-turn conversations with auto-save — clone it and you're ready in 30 seconds.
 
+| Q&A mode | Multi-model Battle |
+|---|---|
+| ![chat](docs/demo-chat.png) | ![battle](docs/demo-battle.png) |
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![Dependencies](https://img.shields.io/badge/dependencies-ZERO-2ea44f?logo=leaflet)](requirements.txt)
 [![CI](https://github.com/bixinlei/ai-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/bixinlei/ai-cli/actions)

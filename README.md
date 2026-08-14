@@ -15,6 +15,10 @@
 
 **把 ChatGPT 塞进你的终端。** 零第三方依赖、支持任意 OpenAI 兼容 API、流式输出、多轮对话自动保存 —— `clone` 即用,30 秒上手。
 
+| 日常问答 | 多模型 Battle 对比 |
+|---|---|
+| ![chat](docs/demo-chat.png) | ![battle](docs/demo-battle.png) |
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![Dependencies](https://img.shields.io/badge/dependencies-ZERO-2ea44f?logo=leaflet)](requirements.txt)
 [![CI](https://github.com/bixinlei/ai-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/bixinlei/ai-cli/actions)
